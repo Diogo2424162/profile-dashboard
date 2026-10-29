@@ -6,11 +6,41 @@ body.dark{
 /*============================================
 ============= Defining header ================
 ==============================================*/
-h3.dark {
+/*definindo o botão*/
+#selectTema{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+#selectTema:hover{
+    border-color: rgba(255,255,255,0.5);
+    transform: scale(1.05);
+}
+#themeIcon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+body.dark button{
+    filter: invert(0.9);
+}
+h3{
+    color:black;
     margin: 0 0 0 15px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;}
+body.dark h3 {
     color: white;}
 header{
+    background-color: rgb(223, 223, 223);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -18,7 +48,7 @@ header{
     padding: 5px;
     margin: -10px -10px -10px -10px;
     border-radius: 0px 0px 5px 5px;}
-header.dark{
+body.dark header{
     background-color: rgb(54, 54, 54);
     padding: 5px;}
 .light{
@@ -31,25 +61,91 @@ select{
 .themeDisplay{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    color: white;}
+    align-items: center;}
+body.dark div{
+    color: white;
+}
 /*============================================*/
 /*=========== Defining Main Page =============*/
 /*============================================*/
 main {
+    flex-wrap: wrap;
     margin: 20px;
     display: flex;
-    flex-direction: row;}
+    flex-direction: row;
+    justify-content: center;}
 #profileContainer{
+    position: relative;
+    display: inline-block;
+
+    flex:1;
+    margin:5px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    justify-items: center;}
+    justify-items: center;
+    flex-shrink: 0;}
+    
 #avatarDisplay{
     display: block;
-    width: 40vb;
-    height: 20vw;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
     background-color: white;
-    border-radius: 30px;}
+    border-radius: 30px;
+    aspect-ratio:1/1
+}
+#wrapper:hover #avatarDisplay{
+    transform: scale(1.01);
+    transition: transform 0.5s ease;
+}
+#wrapper{
+    position: relative; 
+    display: inline-block;
+    margin: 10px;
+}
+#editButton{
+    position: absolute;
+    bottom: 10px;   
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    border-radius: 30px;
+    background-color: var(--bg-button, #bdbcbc); 
+    border: 2px solid rgba(184, 184, 184, 0.226);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+#editButton:hover{
+    filter: brightness(1.2);
+    transform: scale(1.02);
+    transition: transform 0.2s ease;
+}
+#editButton img{
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+body.dark img{
+    filter: invert(0.8);
+}
+body.dark #editButton{
+    filter: invert(0);
+    background-color: var(--bg-button, #4b4b4b);
+}
+
+#formsContainer{
+    min-width: 200px;
+    min-height: 200px;
+    flex:2;
+}

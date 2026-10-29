@@ -1,0 +1,55 @@
+/*Definindo regras Globais*/
+html{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;}
+body.dark{
+    background-color: rgb(37, 36, 36);}
+/*============================================
+============= Defining header ================
+==============================================*/
+h3.dark {
+    margin: 0 0 0 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    margin: -10px -10px -10px -10px;
+    border-radius: 0px 0px 5px 5px;}
+header.dark{
+    background-color: rgb(54, 54, 54);
+    padding: 5px;}
+.light{
+    background-color: white;}
+select{
+    margin: 10px;
+    size: 15px;
+    padding: 5px;
+    border-radius: 30px;}
+.themeDisplay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;}
+/*============================================*/
+/*=========== Defining Main Page =============*/
+/*============================================*/
+main {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;}
+#profileContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;}
+#avatarDisplay{
+    display: block;
+    width: 40vb;
+    height: 20vw;
+    background-color: white;
+    border-radius: 30px;}
